@@ -6,6 +6,7 @@ package com.example.websocketdemo.model;
 public class ChatMessage {
     private MessageType type;
     private String content;
+    private MultipartFile file;
     private String sender;
 
     public enum MessageType {
@@ -30,10 +31,15 @@ public class ChatMessage {
         this.content = content;
     }
 
+    public MultipartFile getFile() {
+        return file;
+    }
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
     public String getSender() {
         return sender;
     }
-
     public void setSender(String sender) {
         this.sender = sender;
     }
